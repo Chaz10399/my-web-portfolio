@@ -1,0 +1,33 @@
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 120px;
+}
+.cards-container {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+@media (max-width: 1080px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .services-container {
+    margin: 32px;
+    & h2 {
+      margin-top: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    margin: 32px;
+    & h2 {
+      margin-top: 32px;
+    }
+  }
+}

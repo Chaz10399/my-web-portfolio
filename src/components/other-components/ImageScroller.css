@@ -1,0 +1,81 @@
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.scroll-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--light-dark);
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  & img {
+    color: var(--clr-bg);
+  }
+  &:hover {
+    background-color: var(--clr-accent);
+  }
+}
+.left-arw {
+  position: relative;
+  left: 64px;
+}
+.right-arw {
+  position: relative;
+  right: 64px;
+}
+.img-container {
+  flex: 1;
+  max-width: 764px;
+  height: 320px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  background-color: transparent;
+  scrollbar-width: none;
+  & img {
+    max-height: 320px;
+  }
+}
+.img-container::-webkit-scrollbar {
+  display: none;
+}
+.img-container img {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  scroll-snap-align: start;
+}
+.img-bar-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 32px;
+  margin-top: 0.5rem;
+  gap: 8px;
+}
+
+.img-bar {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--clr-gray-500);
+  transition: all 0.3s ease; /* Smooth transition */
+  cursor: pointer;
+  transform: scale(1);
+  opacity: 0.5;
+}
+
+.img-bar.active {
+  background-color: var(--clr-accent);
+  transform: scale(1.5); /* Make active bar pop */
+  opacity: 1;
+}

@@ -1,0 +1,218 @@
+.nav-bar {
+  max-height: 20vh;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 12px 0px;
+  font-weight: 400;
+  position: sticky;
+  top: 0;
+  background-color: var(--clr-bg);
+  box-shadow: var(--shadow-sm);
+  user-select: none;
+  z-index: 999;
+}
+.nav-links {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  & li {
+    font: 600 16px/24px var(--font-body);
+  }
+}
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    border-radius: 2rem;
+    width: 3rem;
+    margin-right: 0.15rem;
+  }
+}
+.sun-icon {
+  width: 1.5rem;
+}
+.moon-icon {
+  width: 1.5rem;
+}
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 24px;
+  min-height: 20px;
+  border-radius: 2rem;
+}
+.theme-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dark {
+  background-color: var(--clr-white);
+  & div {
+    position: relative;
+    transform: translateX(-14px);
+    padding: 2px;
+    border-radius: 100%;
+    background-color: var(--clr-gray-900);
+    color: var(--clr-white);
+    transition: transform 0.3s;
+  }
+}
+.light {
+  background-color: var(--clr-yellow);
+  & div {
+    position: relative;
+    transform: translateX(14px);
+    padding: 2px;
+    border-radius: 100%;
+    background-color: var(--clr-white);
+    color: var(--clr-yellow);
+    transition: transform 0.3s;
+  }
+}
+button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: var(--clr-accent);
+}
+.nav-links li:hover {
+  color: var(--clr-accent);
+  border-bottom: 2px solid var(--clr-accent);
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--clr-text);
+  z-index: 100;
+}
+
+@media (max-width: 1080px) {
+  .dark div {
+    position: relative;
+    right: 8px;
+  }
+  .light div {
+    position: relative;
+    transform: translateX(8px);
+  }
+  .nav-bar {
+    padding: 24px 0;
+    max-height: 10vh;
+  }
+  .nav-links li {
+    font: 600 12px/24px var(--font-body);
+  }
+  .my-logo img {
+    width: 1.8rem;
+  }
+  .sun-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  .moon-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  .theme {
+    width: 28px;
+    height: 14px;
+    min-height: 10px;
+  }
+  .dark {
+    background-color: var(--clr-white);
+    & div {
+      transform: translateX(-2px);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    max-height: 15vh;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    font-size: 12px;
+    padding-top: 0;
+  }
+  .theme {
+    display: none;
+  }
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+  }
+  .menu-toggle {
+    display: block;
+    z-index: 999;
+  }
+  .menu-toggle:hover {
+    color: var(--clr-accent);
+  }
+  .nav-links {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clr-bg);
+    width: 100%;
+    gap: 12px;
+    padding: 14px;
+    & li {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      font: 100 12px / 32px var(--font-body);
+    }
+  }
+  .logo-container {
+    padding: 14px 8px 14px 8px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .my-logo img {
+    width: 1.5rem;
+  }
+  .sun-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .moon-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .dark div {
+    position: relative;
+    right: 8px;
+  }
+  .light div {
+    position: relative;
+    transform: translateX(8px);
+  }
+}

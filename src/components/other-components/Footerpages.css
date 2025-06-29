@@ -1,0 +1,6 @@
+.footer-nav {
+  display: inline-flex;
+  cursor: pointer;
+  gap: 8px;
+  padding-right: 40px;
+}

@@ -1,0 +1,32 @@
+.social-icons {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  background-color: transparent;
+  gap: 20px;
+  margin: 8px 0px;
+}
+.social-icons a {
+  font-size: 2rem;
+  padding: 6px 8px;
+  border-radius: 100%;
+  color: var(--clr-accent);
+  transition: all 0.3s ease;
+}
+.social-icons a:hover {
+  box-shadow: var(--btn-shadow-lg);
+  transform: translateY(-5px);
+  color: var(--clr-accent);
+}
+@media (max-width: 1080px) {
+  .social-icons a {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .social-icons a {
+    font-size: 1rem;
+    padding: 0;
+  }
+}

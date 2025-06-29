@@ -1,0 +1,28 @@
+.hero-img {
+  width: 245px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-lg);
+}
+@media (max-width: 1080px) {
+  .hero-section {
+    padding-inline: 100px;
+  }
+  .hero-img {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+  }
+}
+@media (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 40px;
+  }
+  .hero-img {
+    width: 174px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+  }
+}

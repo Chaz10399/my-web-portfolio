@@ -1,0 +1,23 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74px;
+  padding: 8px 14px;
+  color: var(--clr-white);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: var(--clr-accent);
+  transition: all 0.3s;
+}
+.btn:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
+  box-shadow: var(--btn-shadow-md);
+}
+@media (max-width: 1080px) {
+  .btn {
+    padding: 5px 10px;
+  }
+}

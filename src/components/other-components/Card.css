@@ -1,0 +1,73 @@
+.card-container {
+  background-color: var(--clr-bg);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 0.3rem;
+  padding: 0px 24px;
+  box-shadow: var(--shadow-lg);
+  transition: 0.3s ease;
+  & h4,
+  p {
+    color: var(--clr-text);
+  }
+}
+.card-container:hover {
+  transform: scale(1.05);
+  & .icon {
+    background-color: var(--clr-accent);
+  }
+  & h4 {
+    color: var(--clr-accent);
+  }
+}
+.icon {
+  position: relative;
+  bottom: 14px;
+  box-shadow: var(--shadow-lg);
+  background-color: var(--clr-white);
+  width: fit-content;
+  padding: 8px 11px;
+  border-radius: 100%;
+  & img {
+    width: 2.5rem;
+  }
+}
+.card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.3s ease;
+}
+
+.card-text.expanded {
+  -webkit-line-clamp: unset;
+  line-clamp: 3;
+  overflow: visible;
+}
+/* Only show see-more below 1000px screen */
+.see-more {
+  color: var(--clr-accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 1080px) {
+  .card-container {
+    padding: 0px 14px;
+  }
+  .subtext {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .see-more {
+    display: inline-block;
+  }
+  .icon img {
+    width: 2rem;
+  }
+}

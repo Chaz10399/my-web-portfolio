@@ -1,0 +1,67 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+form {
+  width: 564px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  & div {
+    width: 100%;
+  }
+}
+.contact-col {
+  display: inline-flex;
+  gap: 1rem;
+}
+input,
+textarea {
+  width: 100%;
+  font: 100 14px/24px var(--font-body);
+  box-shadow: var(--shadow-md);
+  border-radius: 0.2rem;
+  background-color: var(--clr-white);
+}
+.contact-p {
+  width: 320px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    gap: 0.5rem;
+  }
+  form {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    & div {
+      width: 100%;
+    }
+  }
+  .contact-col {
+    display: inline-flex;
+    gap: 1rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    font: 100 14px/24px var(--font-body);
+    box-shadow: var(--shadow-md);
+    border-radius: 0.2rem;
+    background-color: var(--clr-white);
+  }
+  .contact-p {
+    width: 320px;
+    text-align: center;
+  }
+}
