@@ -48,7 +48,7 @@
 }
 @media (max-width: 1080px) {
   .skill-set {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     gap: 0.3rem;
   }
   .skill-set h4 {

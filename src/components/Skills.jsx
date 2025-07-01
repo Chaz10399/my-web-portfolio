@@ -9,6 +9,8 @@ export default function Skills() {
     { skill: "Java", percent: 70 },
     { skill: "PHP", percent: 65 },
     { skill: "Python", percent: 60 },
+    { skill: "GitHub", percent: 75 },
+    { skill: "Git", percent: 60 },
   ];
   return (
     <section className="col" id="skills">
